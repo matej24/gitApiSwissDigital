@@ -1,27 +1,23 @@
-# GitApiSwissDigital
+# :heavy_plus_sign: GIT API SWISS DIGITAL :heavy_plus_sign:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
-## Development server
+Curently done:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [x] List of up to 10 users from GitHub
+- [x] Input box to search for specific users using the GitHub API
+- [x] Clicking on a user a screen with detailed information about that user
+- [x] On the user details screen display the users avatar, name, date joined and follower list.
+- [ ] The follower list should show up to 10 followers and have a pagination if there are more followers.
+- [ ] Design
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project setup
 
-## Build
+Clone the project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+ng serve
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+Project will be opened on: localhost:4200

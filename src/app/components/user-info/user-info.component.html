@@ -1,0 +1,48 @@
+<div *ngIf="userInfo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">
+          This is <b>{{userInfo.login}}</b>
+         <span *ngIf="userInfo.id"> , his ID {{userInfo.id}}</span> 
+        </a>
+    </nav>
+   <div class="card">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="{{userInfo.avatar_url}}" class="rounded-circle img-fluid" alt="Github userInfo Image">
+            </div>
+            <div class="col-sm-5">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngIf="userInfo.name; else nameNA"><small>Name: </small><b>{{userInfo.name}}</b></li>
+                    <li class="list-group-item" *ngIf="userInfo.bio; else bioNA"><small>Bio: </small><b>{{userInfo.bio}}</b></li>
+                    <li class="list-group-item" *ngIf="userInfo.login"><small>Login: </small><b>{{userInfo.login}}</b></li> 
+                    <li class="list-group-item" *ngIf="userInfo.created_at"><small>Joined: </small><b> {{userInfo.created_at}} </b></li> 
+                    <li class="list-group-item" *ngIf="userInfo.url"><a href="{{userInfo.url}}" target="_blank">{{userInfo.url}}</a></li> 
+
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <p>
+                       <span class="badge badge-dark">{{userInfo.followers}} Followers </span> &nbsp;
+                       <span class="badge badge-dark" *ngIf="userInfo.followings; else zeroFollowings">{{userInfo.followings}} Followings </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<button type="button" class="btn btn-secondary btn-lg btn-block" (click)="onBack()">Back</button>
+
+
+<ng-template #nameNA>
+    <li class="list-group-item">User didn't enter name</li>
+</ng-template>
+
+<ng-template #bioNA>
+    <li class="list-group-item">User didn't enter bio</li>
+</ng-template>
+
+<ng-template #zeroFollowings>
+    <span class="badge badge-dark">Following 0</span>
+</ng-template>
