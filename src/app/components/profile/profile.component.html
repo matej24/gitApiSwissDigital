@@ -54,52 +54,6 @@
         <mat-card-actions>
         </mat-card-actions>
       </mat-card>
-      
-<!-- <form action="" class="form-search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search user with login" [(ngModel)]="username" name="username" (keyup)="findProfile()">
-    </div>
-</form>
-<div class="div-center" *ngIf="!profile">
-    <h3>First 10 Users</h3>
-    <mat-list  *ngFor="let user of users">
-        <mat-list-item class="list-group"><a [routerLink]="['/user-info/', user.login]"> {{user.login}}</a></mat-list-item>
-    </mat-list>
-    <button mat-raised-button color="primary">Primary</button>
-</div>
-<div *ngIf="profile">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">
-          This is <b>{{profile.login}}</b>
-        <span *ngIf="profile.id"> , his ID {{profile.id}}</span>
-        </a>
-    </nav>
-    <div class="card">
-        <div class="row">
-            <div class="col-sm-3">
-                <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="Github Profile Image">
-            </div>
-            <div class="col-sm-5">
-                <ul class="list-group">
-                    <li class="list-group-item" *ngIf="profile.name; else nameNA"><small>Name: </small><b>{{profile.name}}</b></li>
-                    <li class="list-group-item" *ngIf="profile.bio; else bioNA"><small>Bio: </small><b>{{profile.bio}}</b></li>
-                    <li class="list-group-item" *ngIf="profile.login"><small>Login: </small><b>{{profile.login}}</b></li> 
-                    <li class="list-group-item" *ngIf="profile.created_at"><small>Joined: </small><b> {{profile.created_at}} </b></li> 
-                    <li class="list-group-item" *ngIf="profile.url"><a href="{{profile.url}}" target="_blank">{{profile.url}}</a></li> 
-
-                </ul>
-            </div>
-            <div class="col-sm-4">
-                <div>
-                    <p>
-                       <span class="badge badge-dark">{{profile.followers}} Followers </span> &nbsp;
-                       <span class="badge badge-dark" *ngIf="profile.followings; else zeroFollowings">{{profile.followings}} Followings </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 </div>
 
 <ng-template #nameNA>
