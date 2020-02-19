@@ -1,4 +1,43 @@
-<div *ngIf="userInfo">
+<div class="singe-page-app-sec">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>User profile {{userInfo.login}}</mat-card-title>
+      <mat-card-subtitle>His id: {{userInfo.id}} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="userInfo">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="{{userInfo.avatar_url}}" class="rounded-circle img-fluid" alt="Github userInfo Image">
+            </div>
+            <div class="col-sm-5">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngIf="userInfo.name; else nameNA"><small>Name: </small><b>{{userInfo.name}}</b></li>
+                    <li class="list-group-item" *ngIf="userInfo.bio; else bioNA"><small>Bio: </small><b>{{userInfo.bio}}</b></li>
+                    <li class="list-group-item" *ngIf="userInfo.login"><small>Login: </small><b>{{userInfo.login}}</b></li> 
+                    <li class="list-group-item" *ngIf="userInfo.created_at"><small>Joined: </small><b> {{userInfo.created_at}} </b></li> 
+                    <li class="list-group-item" *ngIf="userInfo.url"><a href="{{userInfo.url}}" target="_blank">{{userInfo.url}}</a></li> 
+
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <p>
+                       <span class="badge badge-dark">{{userInfo.followers}} Followers </span> &nbsp;
+                       <span class="badge badge-dark" *ngIf="userInfo.followings; else zeroFollowings">{{userInfo.followings}} Followings </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </mat-card-content>
+        <button mat-raised-button color="primary" (click)="onBack()">Back</button>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<!-- <div *ngIf="userInfo">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
           This is <b>{{userInfo.login}}</b>
@@ -30,9 +69,9 @@
             </div>
         </div>
     </div> 
-</div>
+</div> -->
 
-<button type="button" class="btn btn-secondary btn-lg btn-block" (click)="onBack()">Back</button>
+<!--<button type="button" class="btn btn-secondary btn-lg btn-block" (click)="onBack()">Back</button>-->
 
 
 <ng-template #nameNA>

@@ -1,0 +1,11 @@
+.example-card {
+    min-width: 400px !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.singe-page-app-sec{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 20px;
+}
